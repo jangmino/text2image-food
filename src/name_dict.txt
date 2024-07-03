@@ -1,0 +1,573 @@
+1, 가래떡, Garaetteok (cylindrical rice cake)
+2, 가리비, Scallop
+3, 가지, Eggplant
+4, 가지구이, Grilled eggplant
+5, 가츠동, Katsudon (pork cutlet rice bowl)
+6, 간장, Soy sauce
+7, 갈비구이, Grilled ribs
+8, 갈비찜, Braised short ribs
+9, 갈비탕, Galbitang (short rib soup)
+10, 감, Persimmon
+11, 감귤주스, Tangerine juice
+12, 감자구이, Baked potato
+13, 감자그라탕, Potato gratin
+14, 감자볶음, Stir-fried potatoes
+15, 감자샐러드, Potato salad
+16, 감자스프, Potato soup
+17, 감자칩, Potato chips
+18, 감자튀김, French fries
+19, 거봉포도, Kyoho grapes
+20, 건자두, Dried plum
+21, 건크랜베리, Dried cranberries
+22, 건포도, Raisins
+23, 게맛살, Imitation crab meat
+24, 게장, Marinated crab
+25, 겨자소스, Mustard sauce
+26, 경단, Gyeongdan (sweet rice balls)
+27, 고갈비, Grilled mackerel
+28, 고구마, Sweet potato
+29, 고등어, Mackerel
+30, 고등어구이, Grilled mackerel
+31, 고로케, Croquette
+32, 고르곤졸라, Gorgonzola cheese
+33, 고르곤졸라피자, Gorgonzola pizza
+34, 고추, Chili pepper
+35, 고추장, Gochujang (red chili paste)
+36, 고추장아찌, Pickled chili peppers
+37, 고춧가루, Red chili powder
+38, 골드키위, Gold kiwi
+39, 곱창전골, Gopchang jeongol (beef tripe hot pot)
+40, 곶감, Dried persimmon
+41, 과일주스, Fruit juice
+42, 과일채소샐러드, Fruit and vegetable salad
+43, 과일통조림, Canned fruit
+44, 구아바, Guava
+45, 국수, Noodles
+46, 국화차, Chrysanthemum tea
+47, 군고구마, Roasted sweet potato
+48, 군만두, Pan-fried dumplings
+49, 군밤, Roasted chestnuts
+50, 귤, Tangerine
+51, 그라탕, Gratin
+52, 그린올리브, Green olives
+53, 김, Dried seaweed
+54, 김구이, Roasted seaweed
+55, 김마끼, Kimbap (Korean rice rolls)
+56, 김밥, Gimbap (Korean rice rolls)
+57, 김치국, Kimchi soup
+58, 김치볶음밥, Kimchi fried rice
+59, 김치찌개, Kimchi stew
+60, 까르보나라, Carbonara
+61, 까망베르치즈, Camembert cheese
+62, 깐풍기, Ganpung chicken (sweet and sour crispy chicken)
+63, 껌, Chewing gum
+64, 꼬막, Small clams
+65, 꿀, Honey
+66, 나가사끼짬뽕, Nagasaki-style jjamppong (spicy seafood noodle soup)
+67, 나시고랭, Nasi goreng (Indonesian fried rice)
+68, 낚지볶음, Stir-fried small octopus
+69, 낫또, Natto (fermented soybeans)
+70, 냉면, Naengmyeon (cold noodles)
+71, 냉채족발, Chilled pork hocks with vegetables
+72, 노랑파프리카, Yellow bell pepper
+73, 녹색피망, Green bell pepper
+74, 녹즙, Green vegetable juice
+75, 누텔라, Nutella
+76, 느타리버섯, Oyster mushrooms
+77, 다시마, Kelp
+78, 다크초콜릿, Dark chocolate
+79, 단감, Sweet persimmon
+80, 단호박, Sweet pumpkin
+81, 달걀, Egg
+82, 달걀말이, Rolled omelette
+83, 달걀볶음밥, Egg fried rice
+84, 달걀비빔밥, Egg bibimbap
+85, 달걀샌드위치, Egg sandwich
+86, 달걀찜, Steamed egg
+87, 달걀후라이, Fried egg
+88, 닭가슴살, Chicken breast
+89, 닭가슴살구이, Grilled chicken breast
+90, 닭가슴살샐러드, Chicken breast salad
+91, 닭가슴살시저샐러드, Chicken breast Caesar salad
+92, 닭갈비, Dakgalbi (spicy stir-fried chicken)
+93, 닭갈비구이, Grilled dakgalbi
+94, 닭강정, Sweet and crispy fried chicken
+95, 닭고기, Chicken
+96, 닭고기볶음, Stir-fried chicken
+97, 닭날개, Chicken wings
+98, 닭날개양념구이, Seasoned grilled chicken wings
+99, 닭발, Chicken feet
+100, 닭살채소두반장볶음, Stir-fried chicken with vegetables in doubanjiang sauce
+101, 닭살채소볶음, Stir-fried chicken with vegetables
+102, 닭찜, Braised chicken
+103, 닭파프리카볶음, Stir-fried chicken with bell peppers
+104, 닭훈제구이, Smoked grilled chicken
+105, 당근, Carrot
+106, 당근주스, Carrot juice
+107, 당근케이크, Carrot cake
+108, 대추, Jujube
+109, 대파, Green onion
+110, 데리야끼치킨, Teriyaki chicken
+111, 데친두부, Blanched tofu
+112, 도넛, Donut
+113, 도리아, Doria (rice gratin)
+114, 도리야끼, Doriyaki (red bean pancake)
+115, 돼지갈비찜, Braised pork ribs
+116, 돼지감자, Jerusalem artichoke
+117, 돼지고기고추장불고기, Spicy pork bulgogi
+118, 돼지고기구이, Grilled pork
+119, 돼지고기볶음, Stir-fried pork
+120, 돼지고기스테이크, Pork steak
+121, 된장국, Soybean paste soup
+122, 된장찌개, Doenjang jjigae (soybean paste stew)
+123, 두부, Tofu
+124, 두부튀김, Fried tofu
+125, 두유, Soy milk
+126, 등심스테이크, Sirloin steak
+127, 딤섬, Dim sum
+128, 딸기, Strawberry
+129, 딸기라떼, Strawberry latte
+130, 딸기맛 우유, Strawberry flavored milk
+131, 딸기아이스크림, Strawberry ice cream
+132, 땅콩버터, Peanut butter
+133, 떡갈비, Tteokgalbi (grilled short rib patties)
+134, 떡국, Tteokguk (rice cake soup)
+135, 떡만두국,고기만두, Tteok-manduguk (rice cake and dumpling soup), meat dumplings
+136, 떡볶이, Tteokbokki (spicy rice cakes)
+137, 똠양꿍, Tom yum kung (Thai spicy and sour soup)
+138, 라따뚜이, Ratatouille
+139, 라떼, Latte
+140, 라멘, Ramen
+141, 라면, Ramyeon (Korean instant noodles)
+142, 라자냐, Lasagna
+143, 랍스타, Lobster
+144, 레드와인, Red wine
+145, 레모네이드, Lemonade
+146, 레몬, Lemon
+147, 로메인상추, Romaine lettuce
+148, 롤, Roll
+149, 롤케이크, Swiss roll
+150, 리조또, Risotto
+151, 리코타치즈, Ricotta cheese
+152, 마, Yam
+153, 마늘, Garlic
+154, 마늘구이, Roasted garlic
+155, 마늘장아찌, Pickled garlic
+156, 마들렌, Madeleine
+157, 마르게리따피자, Margherita pizza
+158, 마르게리타피자, Margherita pizza
+159, 마른오징어, Dried squid
+160, 마시멜로우, Marshmallow
+161, 마요네즈, Mayonnaise
+162, 마카로니샐러드, Macaroni salad
+163, 마카롱, Macaron
+164, 마테차, Mate tea
+165, 막걸리, Makgeolli (Korean rice wine)
+166, 막대사탕, Lollipop
+167, 만두, Mandu (Korean dumplings)
+168, 만두국, Manduguk (dumpling soup)
+169, 망고, Mango
+170, 매실, Japanese apricot
+171, 맥주, Beer
+172, 머핀, Muffin
+173, 메밀, Buckwheat
+174, 메쉬드포테이토, Mashed potatoes
+175, 멜론, Melon
+176, 명란젓, Salted pollock roe
+177, 모듬초밥, Assorted sushi
+178, 모듬튀김, Assorted tempura
+179, 모듬회, Assorted sashimi
+180, 모짜렐라치즈, Mozzarella cheese
+181, 무김치, Radish kimchi
+182, 무우, Korean radish
+183, 문어, Octopus
+184, 물미역, Fresh miyeok (seaweed)
+185, 뮤즐리, Muesli
+186, 미소라멘, Miso ramen
+187, 미소장국, Miso soup
+188, 미역국, Miyeok-guk (seaweed soup)
+189, 미역나물, Seasoned miyeok (seaweed)
+190, 미트볼, Meatballs
+191, 밀감, Tangerine
+192, 밀크초콜릿, Milk chocolate
+193, 바게트빵, Baguette
+194, 바나나, Banana
+195, 바나나우유, Banana milk
+196, 바나나칩, Banana chips
+197, 바닐라아이스크림, Vanilla ice cream
+198, 바람떡, Baram-tteok (wind-shaped rice cake)
+199, 바베큐치킨, Barbecue chicken
+200, 바질, Basil
+201, 밤, Chestnut
+202, 밥, Cooked rice
+203, 방울토마토, Cherry tomatoes
+204, 배추, Napa cabbage
+205, 배추김치, Baechu kimchi (napa cabbage kimchi)
+206, 백도, White peach
+207, 백향과, Passion fruit
+208, 버섯, Mushroom
+209, 버섯 장아찌, Pickled mushrooms
+210, 버터, Butter
+211, 버터쿠키, Butter cookies
+212, 번데기, Silkworm pupae
+213, 베이글, Bagel
+214, 베이글샌드위치, Bagel sandwich
+215, 베이컨, Bacon
+216, 베이컨구이, Grilled bacon
+217, 베이컨피자, Bacon pizza
+218, 보드카, Vodka
+219, 보리빵, Barley bread
+220, 보쌈, Bossam (boiled pork wraps)
+221, 보이차, Pu-erh tea
+222, 복숭아, Peach
+223, 볶은원두, Roasted coffee beans
+224, 볶음면, Stir-fried noodles
+225, 볶음밥, Fried rice
+226, 볶음쌀국수, Stir-fried rice noodles
+227, 봉골레파스타, Vongole pasta
+228, 부대찌개, Budae jjigae (Korean army stew)
+229, 부침개, Buchimgae (Korean pancake)
+230, 북어국, Dried pollack soup
+231, 붉은 양배추 절임, Pickled red cabbage
+232, 붕어빵, Bungeoppang (fish-shaped pastry)
+233, 브라우니, Brownie
+234, 브라질너트, Brazil nuts
+235, 브로컬리계란찜, Steamed broccoli and egg
+236, 브로콜리, Broccoli
+237, 블랙커피, Black coffee
+238, 블루베리, Blueberry
+239, 비빔국수, Bibim guksu (spicy cold noodles)
+240, 비빔냉면, Bibim naengmyeon (spicy cold noodles)
+네, 계속해서 다음 20개 항목을 번역하겠습니다.
+241, 비빔밥, Bibimbap (mixed rice bowl)
+242, 비엔나소시지, Vienna sausage
+243, 빵, Bread
+244, 뻥튀기, Ppeongtwigi (puffed rice snack)
+245, 사과, Apple
+246, 사과샐러드, Apple salad
+247, 사과주스, Apple juice
+248, 사과파이, Apple pie
+249, 사이다, Cider (lemon-lime soda)
+250, 사탕, Candy
+251, 산딸기, Raspberry
+252, 살구, Apricot
+253, 살사소스, Salsa sauce
+254, 삶은 고구마, Boiled sweet potato
+255, 삶은달걀, Boiled egg
+256, 삼겹살, Samgyeopsal (pork belly)
+257, 삼겹살구이, Grilled pork belly
+258, 삼계탕, Samgyetang (ginseng chicken soup)
+259, 상추, Lettuce
+260, 상추샐러드, Lettuce salad
+261, 새싹샐러드, Sprout salad
+262, 새우, Shrimp
+263, 새우구이, Grilled shrimp
+264, 새우딤섬, Shrimp dim sum
+265, 새우만두, Shrimp dumplings
+266, 새우매운탕, Spicy shrimp soup
+267, 새우볶음밥, Shrimp fried rice
+268, 새우튀김, Fried shrimp
+269, 샌드위치, Sandwich
+270, 생강차, Ginger tea
+271, 생과일주스, Fresh fruit juice
+272, 생맥주, Draft beer
+273, 생선구이, Grilled fish
+274, 생선찌개, Fish stew
+275, 생선초밥, Fish sushi
+276, 생선튀김, Fried fish
+277, 생선회, Sashimi
+278, 생크림, Fresh cream
+279, 생크림케이크, Fresh cream cake
+280, 석류, Pomegranate
+281, 설탕, Sugar
+282, 센베이, Senbei (Japanese rice cracker)
+283, 셀러리, Celery
+284, 소고기육포, Beef jerky
+285, 소금, Salt
+286, 소면, Somyeon (thin wheat noodles)
+287, 소시지, Sausage
+288, 소시지구이, Grilled sausage
+289, 솜사탕, Cotton candy
+290, 송편, Songpyeon (half-moon shaped rice cake)
+291, 쇠고기구이, Grilled beef
+292, 쇠고기볶음, Stir-fried beef
+293, 수박, Watermelon
+294, 수박주스, Watermelon juice
+295, 숙주나물, Bean sprouts
+296, 순대, Sundae (Korean blood sausage)
+297, 순대국밥, Sundae-gukbap (blood sausage soup with rice)
+298, 순대볶음, Stir-fried sundae
+299, 순두부찌개, Soft tofu stew
+300, 순살찜닭, Boneless braised chicken
+301, 순살치킨, Boneless chicken
+302, 쉐이크, Shake
+303, 슈크림, Choux cream
+304, 스크램블드에그, Scrambled eggs
+305, 스테이크, Steak
+306, 스튜, Stew
+307, 스트링치즈, String cheese
+308, 스파게티, Spaghetti
+309, 스파게티면, Spaghetti noodles
+310, 스프, Soup
+311, 슬라이스치즈, Sliced cheese
+312, 시금치, Spinach
+313, 시럽, Syrup
+314, 시루떡, Sirutteok (steamed rice cake)
+315, 시리얼, Cereal
+316, 시리얼바, Cereal bar
+317, 시저샐러드, Caesar salad
+318, 쌀, Rice
+319, 쌀과자, Rice cracker
+320, 쌀국수, Rice noodles
+321, 쌀밥, Cooked rice
+322, 아귀찜, Braised angler fish
+323, 아마씨, Flaxseed
+324, 아몬드, Almond
+325, 아보카도, Avocado
+326, 아보카도샐러드, Avocado salad
+327, 아스파라거스구이, Grilled asparagus
+328, 아스파라거스볶음밥, Asparagus fried rice
+329, 아오리사과, Aori apple
+330, 아이스라떼, Iced latte
+331, 아이스커피, Iced coffee
+332, 아이스크림, Ice cream
+333, 아이스티, Iced tea
+334, 아포가토, Affogato
+335, 안심스테이크, Tenderloin steak
+336, 알로에주스, Aloe juice
+337, 알밥, Albap (rice with fish roe)
+338, 알타리김치, Altari kimchi (young radish kimchi)
+339, 애플민트, Apple mint
+340, 애호박, Young zucchini
+341, 액상요구르트, Liquid yogurt
+342, 앵두, Cherry
+343, 야끼소바, Yakisoba (Japanese stir-fried noodles)
+344, 야채볶음, Stir-fried vegetables
+345, 양꼬치, Lamb skewers
+346, 양념치킨, Seasoned fried chicken
+347, 양배추, Cabbage
+348, 양배추샐러드, Cabbage salad
+349, 양배추쌈, Cabbage wraps
+350, 양배추절임, Pickled cabbage
+351, 양상추샐러드, Lettuce salad
+352, 양주, Western liquor
+353, 양파, Onion
+354, 양파샐러드, Onion salad
+355, 양파튀김, Fried onion rings
+356, 어묵국, Fish cake soup
+357, 어묵탕, Fish cake hot pot
+358, 어육소시지, Fish sausage
+359, 에그타르트, Egg tart
+360, 연근, Lotus root
+361, 연어구이, Grilled salmon
+362, 연어롤, Salmon roll
+363, 연어샐러드, Salmon salad
+364, 연어초밥, Salmon sushi
+365, 연어회, Salmon sashimi
+366, 오디, Mulberry
+367, 오렌지, Orange
+368, 오렌지주스, Orange juice
+369, 오리구이, Roasted duck
+370, 오리로스구이, Roasted duck breast
+371, 오므라이스, Omurice (omelet rice)
+372, 오믈렛, Omelet
+373, 오미자, Omija (five-flavor berry)
+374, 오븐구이치킨몸통, Oven-roasted chicken body
+375, 오이, Cucumber
+376, 오이김치, Cucumber kimchi
+377, 오이샐러드, Cucumber salad
+378, 오이피클, Pickled cucumber
+379, 오징어, Squid
+380, 오징어튀김, Fried squid
+381, 오코노미야끼, Okonomiyaki (Japanese savory pancake)
+382, 오트밀, Oatmeal
+383, 옥수수스프, Corn soup
+384, 와사비, Wasabi
+385, 와인, Wine
+386, 와플, Waffle
+387, 완탕, Wonton
+388, 왕돈가스, King-size pork cutlet
+389, 왕만두, King-size dumplings
+390, 요구르트, Yogurt
+391, 우동, Udon
+392, 우유, Milk
+393, 유과, Yugwa (deep-fried rice snack)
+394, 유자, Yuzu (citrus fruit)
+395, 육포, Beef jerky
+396, 육회, Yukhoe (Korean beef tartare)
+397, 육회비빔밥, Yukhoe bibimbap (beef tartare mixed rice)
+398, 은행, Ginkgo nut
+399, 인삼, Ginseng
+400, 자두, Plum
+401, 자몽, Grapefruit
+402, 자몽주스, Grapefruit juice
+403, 잡곡식빵, Multigrain bread
+404, 잡채, Japchae (stir-fried glass noodles and vegetables)
+405, 잣, Pine nuts
+406, 장어구이, Grilled eel
+407, 장어덮밥, Eel rice bowl
+408, 장어초밥, Eel sushi
+409, 적양배추, Red cabbage
+410, 전복, Abalone
+411, 절임배추, Salted napa cabbage
+412, 젤리, Jelly
+413, 조미김, Seasoned dried seaweed
+414, 족발, Jokbal (braised pig's trotters)
+415, 주먹밥, Jumeokbap (Korean rice balls)
+416, 주스, Juice
+417, 죽, Porridge
+418, 짜장면, Jajangmyeon (black bean sauce noodles)
+419, 짬뽕, Jjamppong (spicy seafood noodle soup)
+420, 쨈빵, Jam bread
+421, 쪽갈비구이, Grilled beef short ribs
+422, 쭈꾸미볶음, Stir-fried baby octopus
+423, 찐빵, Steamed bun
+424, 참깨, Sesame seeds
+425, 참외, Korean melon
+426, 참치샌드위치, Tuna sandwich
+427, 참치통조림, Canned tuna
+428, 참치회, Tuna sashimi
+429, 찹쌀떡, Glutinous rice cake
+430, 채소주스, Vegetable juice
+431, 채소죽, Vegetable porridge
+432, 천도복숭아, Nectarine
+433, 청포도, Green grapes
+434, 체다치즈, Cheddar cheese
+435, 체리, Cherry
+436, 초밥, Sushi
+437, 초코머핀, Chocolate muffin
+438, 초코바, Chocolate bar
+439, 초코아이스크림, Chocolate ice cream
+440, 초코우유, Chocolate milk
+441, 초코케이크, Chocolate cake
+442, 초코쿠키, Chocolate cookie
+443, 초콜릿, Chocolate
+444, 추어탕, Chueotang (loach soup)
+445, 춘권, Spring roll
+446, 츄러스, Churros
+447, 치즈, Cheese
+448, 치즈볼, Cheese ball
+449, 치즈빵, Cheese bread
+450, 치즈스틱, Cheese stick
+451, 치즈피자, Cheese pizza
+452, 치커리, Chicory
+453, 치킨, Chicken
+454, 치킨너겟, Chicken nuggets
+455, 치킨스테이크, Chicken steak
+456, 치킨카레, Chicken curry
+457, 칠리소스, Chili sauce
+458, 카나페, Canapé
+459, 카라멜, Caramel
+460, 카레라이스, Curry rice
+461, 카레소스, Curry sauce
+462, 카카오닙스, Cacao nibs
+463, 카페라떼, Café latte
+464, 카페모카, 휘핑크림, Café mocha with whipped cream
+465, 카푸치노, Cappuccino
+466, 카프레제샐러드, Caprese salad
+467, 캐러멜마끼아또, Caramel macchiato
+468, 캐슈넛, Cashew nut
+469, 캘리포니아롤, California roll
+470, 커스터드크림, Custard cream
+471, 커피, Coffee
+472, 컵라면, Cup noodles
+473, 케이크, Cake
+474, 케일, Kale
+475, 케첩, Ketchup
+476, 코코아, Cocoa
+477, 콜라비, Kohlrabi
+478, 콤비네이션피자, Combination pizza
+479, 콩국수, Kong-guksu (cold soybean noodle soup)
+480, 콩나물, Bean sprouts
+481, 콩샐러드, Bean salad
+482, 쿠키, Cookie
+483, 퀘사디아, Quesadilla
+484, 크래커, Cracker
+485, 크랜베리, Cranberry
+486, 크레페, Crepe
+487, 크로와상, Croissant
+488, 크림치즈, Cream cheese
+489, 크림파스타, Cream pasta
+490, 키위, Kiwi
+491, 타코야키, Takoyaki (octopus balls)
+492, 탄산음료, Carbonated drink
+493, 토마토, Tomato
+494, 토마토샐러드, Tomato salad
+495, 토마토주스, Tomato juice
+496, 토마토파스타소스, Tomato pasta sauce
+497, 토스트, Toast
+498, 통닭, Whole chicken
+499, 통밀빵, Whole wheat bread
+500, 티라미수, Tiramisu
+501, 파니니, Panini
+502, 파닭, Pa-dak (chicken with green onions)
+503, 파스타, Pasta
+504, 파슬리, Parsley
+505, 파인애플, Pineapple
+506, 파전, Pajeon (green onion pancake)
+507, 파파야, Papaya
+508, 파프리카, Bell pepper
+509, 파프리카노랑, Yellow bell pepper
+510, 파프리카빨강, Red bell pepper
+511, 팝콘, Popcorn
+512, 팟타이, Pad Thai
+513, 팥, Red bean
+514, 팥빙수, Patbingsu (shaved ice with red beans)
+515, 팥죽, Red bean porridge
+516, 팽이버섯, Enoki mushroom
+517, 페퍼로니피자, Pepperoni pizza
+518, 펜네파스타, Penne pasta
+519, 포도, Grape
+520, 폭립, Pork ribs
+521, 표고버섯, Shiitake mushroom
+522, 푸딩, Pudding
+523, 풋고추, Green chili pepper
+524, 프레즐, Pretzel
+525, 프렌치토스트, French toast
+526, 피망, Bell pepper
+527, 피스타치오, Pistachio
+528, 피자, Pizza
+529, 피칸, Pecan
+530, 하와이안피자, Hawaiian pizza
+531, 한라봉, Hallabong (Jeju tangerine)
+532, 할라피뇨, Jalapeño
+533, 할라피뇨피클, Pickled jalapeño
+534, 함박스테이크, Hamburg steak
+535, 핫도그, Hot dog
+536, 핫소스, Hot sauce
+537, 핫윙, Hot wings
+538, 핫초코, Hot chocolate
+539, 핫케이크, Hotcake
+540, 해물덮밥, Seafood rice bowl
+541, 해물볶음, Stir-fried seafood
+542, 해물찜, Steamed seafood
+543, 해물탕, Seafood hot pot
+544, 해바라기씨, Sunflower seeds
+545, 해삼, Sea cucumber
+546, 해시브라운, Hash browns
+547, 해장국, Hangover soup
+548, 햄, Ham
+549, 햄볶음밥, Ham fried rice
+550, 햄샌드위치, Ham sandwich
+551, 햄치즈샌드위치, Ham and cheese sandwich
+552, 호두, Walnut
+553, 호두과자, Walnut cookie
+554, 호두파이, Walnut pie
+555, 호밀빵, Rye bread
+556, 호박씨, Pumpkin seeds
+557, 홍차, Black tea
+558, 화덕피자, Wood-fired pizza
+559, 화이트와인, White wine
+560, 회오리감자, Tornado potato
+561, 후라이드치킨, Fried chicken
+562, 후라이드치킨,날개, Fried chicken wings
+563, 후라이드치킨다리, Fried chicken legs
+564, 후랑크소시지, Frankfurter sausage
+565, 후렌치후라이, French fries
+566, 후추, Black pepper
+567, 훈제연어, Smoked salmon
+568, 훈제오리, Smoked duck
+569, 훈제오리샐러드, Smoked duck salad
+570, 훈제치킨, Smoked chicken
+571, 흰죽, White rice porridge
+572, blt샌드위치, BLT sandwich
