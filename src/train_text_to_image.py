@@ -71,7 +71,9 @@ if is_wandb_available():
 
 
 # Will error if the minimal version of diffusers is not installed. Remove at your own risks.
+# Start of code by Jangmin Oh
 check_min_version("0.28.0.dev0")
+# End of code by Jangmin Oh
 
 logger = get_logger(__name__, log_level="INFO")
 
@@ -80,9 +82,13 @@ DATASET_NAME_MAPPING = {
 }
 
 
+# Start of code by Jangmin Oh
 def extract_text(example):
     example["text"] = example["json"]["text"]
     return example
+
+
+# End of code by Jangmin Oh
 
 
 def save_model_card(
@@ -439,16 +445,6 @@ def parse_args():
         "--use_ema", action="store_true", help="Whether to use EMA model."
     )
     parser.add_argument(
-        "--offload_ema",
-        action="store_true",
-        help="Offload EMA model to CPU during training step.",
-    )
-    parser.add_argument(
-        "--foreach_ema",
-        action="store_true",
-        help="Use faster foreach implementation of EMAModel.",
-    )
-    parser.add_argument(
         "--non_ema_revision",
         type=str,
         default=None,
@@ -614,8 +610,8 @@ def parse_args():
 
 def main():
     args = parse_args()
-    
-    # Star of code by Jangmin Oh
+
+    # Start of code by Jangmin Oh
     custom_num_examples = 2373670
     # end of code by Jangmin Oh
 
@@ -753,7 +749,6 @@ def main():
             ema_unet.parameters(),
             model_cls=UNet2DConditionModel,
             model_config=ema_unet.config,
-            foreach=args.foreach_ema,
         )
 
     if args.enable_xformers_memory_efficient_attention:
@@ -788,15 +783,10 @@ def main():
         def load_model_hook(models, input_dir):
             if args.use_ema:
                 load_model = EMAModel.from_pretrained(
-                    os.path.join(input_dir, "unet_ema"),
-                    UNet2DConditionModel,
-                    foreach=args.foreach_ema,
+                    os.path.join(input_dir, "unet_ema"), UNet2DConditionModel
                 )
                 ema_unet.load_state_dict(load_model.state_dict())
-                if args.offload_ema:
-                    ema_unet.pin_memory()
-                else:
-                    ema_unet.to(accelerator.device)
+                ema_unet.to(accelerator.device)
                 del load_model
 
             for _ in range(len(models)):
@@ -865,7 +855,6 @@ def main():
             cache_dir=args.cache_dir,
             data_dir=args.train_data_dir,
         )
-
     else:
         data_files = {}
         # start of modification by Jangmin Oh
@@ -884,15 +873,16 @@ def main():
         #     cache_dir=args.cache_dir,
         # )
         # end of modification by Jangmin Oh
-
         # See more about loading custom images at
         # https://huggingface.co/docs/datasets/v2.4.0/en/image_load#imagefolder
 
     # Preprocessing the datasets.
     # We need to tokenize inputs and targets.
 
+    # Start of code by Jangmin Oh
     column_names = ["__key__", "__url__", "jpg", "text"]
     # column_names = dataset["train"].column_names
+    # End of code by Jangmin Oh
 
     # 6. Get the column names for input/target.
     dataset_columns = DATASET_NAME_MAPPING.get(args.dataset_name, None)
@@ -975,8 +965,10 @@ def main():
                 .select(range(args.max_train_samples))
             )
         # Set the training transforms
+        # Start of code by Jangmin Oh
         train_dataset = dataset["train"].map(preprocess_train, batched=True)
         # train_dataset = dataset["train"].with_transform(preprocess_train)
+        # End of code by Jangmin Oh
 
     def collate_fn(examples):
         pixel_values = torch.stack([example["pixel_values"] for example in examples])
@@ -987,7 +979,9 @@ def main():
     # DataLoaders creation:
     train_dataloader = torch.utils.data.DataLoader(
         train_dataset,
+        # Start of code by Jangmin Oh
         # shuffle=True,
+        # End of code by Jangmin Oh
         collate_fn=collate_fn,
         batch_size=args.train_batch_size,
         num_workers=args.dataloader_num_workers,
@@ -995,10 +989,15 @@ def main():
 
     # Scheduler and math around the number of training steps.
     overrode_max_train_steps = False
-    num_update_steps_per_epoch = math.ceil(custom_num_examples / args.gradient_accumulation_steps)
+
+    # Start of code by Jangmin Oh
+    num_update_steps_per_epoch = math.ceil(
+        custom_num_examples / args.gradient_accumulation_steps
+    )
     # num_update_steps_per_epoch = math.ceil(
     #     len(train_dataloader) / args.gradient_accumulation_steps
     # )
+    # End of code by Jangmin Oh
     if args.max_train_steps is None:
         args.max_train_steps = args.num_train_epochs * num_update_steps_per_epoch
         overrode_max_train_steps = True
@@ -1016,10 +1015,7 @@ def main():
     )
 
     if args.use_ema:
-        if args.offload_ema:
-            ema_unet.pin_memory()
-        else:
-            ema_unet.to(accelerator.device)
+        ema_unet.to(accelerator.device)
 
     # For mixed precision training we cast all non-trainable weights (vae, non-lora text_encoder and non-lora unet) to half-precision
     # as these weights are only used for inference, keeping weights in full precision is not required.
@@ -1036,11 +1032,14 @@ def main():
     vae.to(accelerator.device, dtype=weight_dtype)
 
     # We need to recalculate our total training steps as the size of the training dataloader may have changed.
+    # Start of code by Jangmin Oh
     num_update_steps_per_epoch = math.ceil(
-        custom_num_examples /accelerator.num_processes
+        custom_num_examples
+        / accelerator.num_processes
         / args.gradient_accumulation_steps
         # len(train_dataloader) / args.gradient_accumulation_steps
     )
+    # End of code by Jangmin Oh
     if overrode_max_train_steps:
         args.max_train_steps = args.num_train_epochs * num_update_steps_per_epoch
     # Afterwards we recalculate our number of training epochs
@@ -1067,8 +1066,9 @@ def main():
     )
 
     logger.info("***** Running training *****")
-    logger.info(f"  Num examples = f{custom_num_examples}")
-    # logger.info(f"  Num examples = {len(train_dataset)}")
+    # Start of code by Jangmin Oh
+    logger.info(f"  Num examples = {custom_num_examples}")
+    # End of code by Jangmin Oh
     logger.info(f"  Num Epochs = {args.num_train_epochs}")
     logger.info(f"  Instantaneous batch size per device = {args.train_batch_size}")
     logger.info(
@@ -1235,11 +1235,7 @@ def main():
             # Checks if the accelerator has performed an optimization step behind the scenes
             if accelerator.sync_gradients:
                 if args.use_ema:
-                    if args.offload_ema:
-                        ema_unet.to(device="cuda", non_blocking=True)
                     ema_unet.step(unet.parameters())
-                    if args.offload_ema:
-                        ema_unet.to(device="cpu", non_blocking=True)
                 progress_bar.update(1)
                 global_step += 1
                 accelerator.log({"train_loss": train_loss}, step=global_step)
