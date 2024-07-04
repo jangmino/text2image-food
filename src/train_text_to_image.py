@@ -614,6 +614,10 @@ def parse_args():
 
 def main():
     args = parse_args()
+    
+    # Star of code by Jangmin Oh
+    custom_num_examples = 2373670
+    # end of code by Jangmin Oh
 
     if args.report_to == "wandb" and args.hub_token is not None:
         raise ValueError(
@@ -991,7 +995,7 @@ def main():
 
     # Scheduler and math around the number of training steps.
     overrode_max_train_steps = False
-    num_update_steps_per_epoch = math.ceil(2373670 / args.gradient_accumulation_steps)
+    num_update_steps_per_epoch = math.ceil(custom_num_examples / args.gradient_accumulation_steps)
     # num_update_steps_per_epoch = math.ceil(
     #     len(train_dataloader) / args.gradient_accumulation_steps
     # )
@@ -1033,7 +1037,7 @@ def main():
 
     # We need to recalculate our total training steps as the size of the training dataloader may have changed.
     num_update_steps_per_epoch = math.ceil(
-        2373670
+        custom_num_examples /accelerator.num_processes
         / args.gradient_accumulation_steps
         # len(train_dataloader) / args.gradient_accumulation_steps
     )
@@ -1063,7 +1067,7 @@ def main():
     )
 
     logger.info("***** Running training *****")
-    logger.info(f"  Num examples = 2373670")
+    logger.info(f"  Num examples = f{custom_num_examples}")
     # logger.info(f"  Num examples = {len(train_dataset)}")
     logger.info(f"  Num Epochs = {args.num_train_epochs}")
     logger.info(f"  Instantaneous batch size per device = {args.train_batch_size}")
