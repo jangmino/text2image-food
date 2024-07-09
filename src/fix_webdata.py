@@ -90,7 +90,9 @@ def fix_webdataset_files(input_dir, output_dir, num_processes=None):
 
 
 if __name__ == "__main__":
-    input_dir = "/Jupyter/dataset/food-images/webdataset"
-    output_dir = "/Jupyter/dataset/food-images/webdataset_fix"
-    num_processes = 4  # 원하는 프로세스 수를 지정하세요. None으로 설정하면 CPU 코어 수를 사용합니다.
+    # input_dir = "/Jupyter/dataset/food-images/webdataset"
+    # output_dir = "/Jupyter/dataset/food-images/webdataset_fix"
+    input_dir = "/Jupyter/tmp"
+    output_dir = "/Jupyter/tmp_fix"
+    num_processes = 1  # 원하는 프로세스 수를 지정하세요. None으로 설정하면 CPU 코어 수를 사용합니다.
     fix_webdataset_files(input_dir, output_dir, num_processes)

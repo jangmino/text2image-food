@@ -1035,6 +1035,7 @@ def main():
     # Start of code by Jangmin Oh
     num_update_steps_per_epoch = math.ceil(
         custom_num_examples
+        / args.batch_size
         / accelerator.num_processes
         / args.gradient_accumulation_steps
         # len(train_dataloader) / args.gradient_accumulation_steps
