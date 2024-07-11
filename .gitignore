@@ -166,3 +166,4 @@ wandb/
 tags.txt
 src/metadata.jsonl
 src/sd-foodai-model-rxt4090/
+src/sd-foodai-model/
