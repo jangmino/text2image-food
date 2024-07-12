@@ -167,3 +167,5 @@ tags.txt
 src/metadata.jsonl
 src/sd-foodai-model-rxt4090/
 src/sd-foodai-model/
+src/initial-ai-menu-stable-diffusion-v1-4/
+src/sd-foodai-model-kor/

@@ -26,6 +26,7 @@ from pathlib import Path
 import accelerate
 import datasets
 import numpy as np
+import pandas as pd
 import torch
 import torch.nn.functional as F
 import torch.utils.checkpoint
@@ -83,9 +84,39 @@ DATASET_NAME_MAPPING = {
 
 
 # Start of code by Jangmin Oh
-def extract_text(example):
-    example["text"] = example["json"]["text"]
-    return example
+def extract_builder(text_conv_dic: pd.DataFrame, use_korean: bool = False):
+
+    def _extract_text_english(example):
+        example["text"] = example["json"]["text"]
+        return example
+
+    def _extract_text_korean(example):
+        original_text = example["json"]["text"]
+        try:
+            converted_text = text_conv_dic.loc[original_text, "Korean"]
+            if isinstance(converted_text, str):
+                example["text"] = converted_text
+            else:
+                example["text"] = converted_text.values
+        except KeyError:
+            example["text"] = original_text
+
+        return example
+
+    return _extract_text_korean if use_korean else _extract_text_english
+
+
+def build_name_dict(name_dict_path: str):
+    name_dict = {}
+    with open(name_dict_path, "r", encoding="utf-8") as f:
+        for line in f:
+            parts = line.strip().split(", ")
+            if len(parts) == 3:
+                _, korean, english = parts
+                name_dict[korean] = english
+    return pd.DataFrame(
+        list(name_dict.items()), columns=["Korean", "English"]
+    ).set_index("English")
 
 
 # End of code by Jangmin Oh
@@ -591,6 +622,29 @@ def parse_args():
             " more information see https://huggingface.co/docs/accelerate/v0.17.0/en/package_reference/accelerator#accelerate.Accelerator"
         ),
     )
+    # Start of code by Jangmin Oh
+    parser.add_argument(
+        "--custom_num_examples",
+        type=int,
+        default=2373670,
+        help=(
+            "The number of example images in the dataset. (needed if you use Streaming Mode). This is used to calculate the total number of training steps."
+        ),
+    )
+    parser.add_argument(
+        "--name_dict_path",
+        type=str,
+        default="./name_dict.txt",
+        help=(
+            "The path of name_dict.txt. This file contains the mapping between Korean and English names."
+        ),
+    )
+    parser.add_argument(
+        "--use_korean",
+        action="store_true",
+        help="use CLIP which supports Korean",
+    )
+    # End of code by Jangmin Oh
 
     args = parser.parse_args()
     env_local_rank = int(os.environ.get("LOCAL_RANK", -1))
@@ -611,10 +665,6 @@ def parse_args():
 def main():
     args = parse_args()
 
-    # Start of code by Jangmin Oh
-    custom_num_examples = 2373670
-    # end of code by Jangmin Oh
-
     if args.report_to == "wandb" and args.hub_token is not None:
         raise ValueError(
             "You cannot use both --report_to=wandb and --hub_token due to a security risk of exposing your token."
@@ -630,6 +680,11 @@ def main():
                 " use `--variant=non_ema` instead."
             ),
         )
+
+    # Start of code by Jangmin Oh
+    text_conv_df = build_name_dict(args.name_dict_path)
+    # End of code by Jangmin Oh
+
     logging_dir = os.path.join(args.output_dir, args.logging_dir)
 
     accelerator_project_config = ProjectConfiguration(
@@ -864,7 +919,10 @@ def main():
             cache_dir=args.cache_dir,
             streaming=True,
         )
-        dataset = dataset.map(extract_text)
+
+        dataset = dataset.map(extract_builder(text_conv_df, args.use_korean))
+        # it = iter(dataset["train"])
+        # logger.info(next(it))
         # if args.train_data_dir is not None:
         #     data_files["train"] = os.path.join(args.train_data_dir, "**")
         # dataset = load_dataset(
@@ -918,6 +976,7 @@ def main():
                 # take a random caption if there are multiple
                 captions.append(random.choice(caption) if is_train else caption[0])
             else:
+                logging.warn(examples[caption_column])
                 raise ValueError(
                     f"Caption column `{caption_column}` should contain either strings or lists of strings."
                 )
@@ -992,7 +1051,9 @@ def main():
 
     # Start of code by Jangmin Oh
     num_update_steps_per_epoch = math.ceil(
-        custom_num_examples / args.train_batch_size / args.gradient_accumulation_steps
+        args.custom_num_examples
+        / args.train_batch_size
+        / args.gradient_accumulation_steps
     )
     # num_update_steps_per_epoch = math.ceil(
     #     len(train_dataloader) / args.gradient_accumulation_steps
@@ -1034,7 +1095,7 @@ def main():
     # We need to recalculate our total training steps as the size of the training dataloader may have changed.
     # Start of code by Jangmin Oh
     num_update_steps_per_epoch = math.ceil(
-        custom_num_examples
+        args.custom_num_examples
         / args.train_batch_size
         / accelerator.num_processes
         / args.gradient_accumulation_steps
@@ -1068,15 +1129,17 @@ def main():
 
     logger.info("***** Running training *****")
     # Start of code by Jangmin Oh
-    logger.info(f"  Num examples = {custom_num_examples}")
-    # End of code by Jangmin Oh
+    logger.info(f"  Num examples = {args.custom_num_examples}")
+    logger.info(f"  Num update steps per epoch = {num_update_steps_per_epoch}")
     logger.info(f"  Num Epochs = {args.num_train_epochs}")
+    # End of code by Jangmin Oh
     logger.info(f"  Instantaneous batch size per device = {args.train_batch_size}")
     logger.info(
         f"  Total train batch size (w. parallel, distributed & accumulation) = {total_batch_size}"
     )
     logger.info(f"  Gradient Accumulation steps = {args.gradient_accumulation_steps}")
     logger.info(f"  Total optimization steps = {args.max_train_steps}")
+
     global_step = 0
     first_epoch = 0
 
